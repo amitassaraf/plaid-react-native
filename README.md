@@ -1,11 +1,11 @@
-### React Native Plaid Link
+### Plaid Link for React Native
 
-![react_native_plaid_link](https://user-images.githubusercontent.com/2805320/29003828-ad4ab974-7ac6-11e7-90f9-e7b637b58de1.gif)
+![plaid_react_native](https://user-images.githubusercontent.com/2805320/29003828-ad4ab974-7ac6-11e7-90f9-e7b637b58de1.gif)
 
 ### Usage
 
 ```
-yarn add react-native-plaid
+yarn add plaid-react-native
 yarn link react-native-webview
 ```
 
