@@ -1,0 +1,38 @@
+{
+  "name": "react-native-plaid",
+  "version": "1.0.0",
+  "description": "Plaid Link for React Native",
+  "main": "index.jsx",
+  "author": "Amit Assaraf",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitassaraf/react-native-plaid.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "plaid",
+    "link",
+    "webview",
+    "ios",
+    "android",
+    "login",
+    "react-component"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amitassaraf/react-native-plaid/issues"
+  },
+  "homepage": "https://github.com/amitassaraf/react-native-plaid#readme",
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react-native": ">= 0.40.0",
+    "react-native-webview": "^6.11.0"
+  },
+  "dependencies": {
+    "object.omit": "^3.0.0"
+  }
+}
