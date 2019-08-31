@@ -36,7 +36,7 @@ const PlaidLink = (props) => {
     uri = user !== undefined ? `${uri}&user=${encodeURI(JSON.stringify(user))}` : uri;
 
     const onMessage = e => {
-        this.props.onMessage(JSON.parse(e.nativeEvent.data));
+        props.onMessage(JSON.parse(e.nativeEvent.data));
     };
 
     return <WebView
