@@ -3,7 +3,7 @@ import {WebView} from 'react-native-webview';
 import {PropTypes} from 'prop-types';
 import omit from 'object.omit';
 
-const injectedJavaScript = `(function() {
+const plaidInjectedJavaScript = `(function() {
   window.postMessage = function(data) {
     window.ReactNativeWebView.postMessage(data);
   };
@@ -19,7 +19,8 @@ const PlaidLink = (props) => {
         webhook,
         token,
         countryCodes,
-        user
+        user,
+        injectedJavaScript
     } = props;
 
     let uri = `https://cdn.plaid.com/link/v2/stable/link.html?key=${
@@ -49,13 +50,14 @@ const PlaidLink = (props) => {
             'countryCodes',
             'webhook',
             'token',
-            'ref'
+            'ref',
+            'injectedJavaScript'
         ])}
         ref={props.plaidRef}
         source={{uri}}
         onMessage={onMessage}
         useWebKit
-        injectedJavaScript={injectedJavaScript}
+        injectedJavaScript={injectedJavaScript ? plaidInjectedJavaScript + injectedJavaScript : plaidInjectedJavaScript}
     />;
 };
 

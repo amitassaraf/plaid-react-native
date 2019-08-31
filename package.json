@@ -1,6 +1,6 @@
 {
   "name": "plaid-react-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Plaid Link for React Native",
   "main": "index.js",
   "author": "Amit Assaraf",
