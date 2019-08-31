@@ -57,7 +57,13 @@ const PlaidLink = (props) => {
         source={{uri}}
         onMessage={onMessage}
         useWebKit
-        injectedJavaScript={injectedJavaScript ? plaidInjectedJavaScript + injectedJavaScript : plaidInjectedJavaScript}
+        injectedJavaScript={injectedJavaScript !== undefined ? `(function() {
+  window.postMessage = function(data) {
+    window.ReactNativeWebView.postMessage(data);
+  };
+  
+  ${injectedJavaScript}
+})()` : plaidInjectedJavaScript}
     />;
 };
 
